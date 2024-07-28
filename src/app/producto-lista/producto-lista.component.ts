@@ -25,6 +25,6 @@ export class ProductoListaComponent {
     });
   }
   editarProducto(id: number) {
-    this.enrutador.navigate(['editar-producto',id])
+    this.enrutador.navigate(['editar-producto',id]);
   }
 }

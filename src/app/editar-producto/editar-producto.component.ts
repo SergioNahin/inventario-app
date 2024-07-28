@@ -22,7 +22,7 @@ export class EditarProductoComponent {
         ,
         error: (errores: any) => console.log(errores)
       }
-    )
+    );
   }
   onSubmit(){
 
