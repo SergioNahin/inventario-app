@@ -21,4 +21,9 @@ export class ProductoService {
   obtenerProductoId(id:number){
     return this.clienteHttp.get<Producto>(`${this.urlBase}/${id}`);
   }
+
+  editarProducto(id: number, producto: Producto): Observable<Object>{
+    return this.clienteHttp.put(`${this.urlBase}/${id}`, producto);
+  }
+
 }
