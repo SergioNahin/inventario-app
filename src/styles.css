@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #3f6d4e;
+  --secondary-color: #1d1a2f;
+  --accent-color: #8bd450;
+  --highlight-color: #965fd4;
+  --complementary-color: #734f9a;
+  --text-color: #ffffff;
+  --background-color: #1d1a2f;
+  --button-hover-color: rgba(139, 212, 80, 0.8); 
+}
+
+body {
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 10px 0;
+  color: var(--accent-color);
+}
+
+p {
+  margin: 0;
+  padding: 10px 0;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--highlight-color);
+}
+
+button {
+  font-family: 'Ginebra, sans-serif';
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.bg-highlight {
+  background-color: var(--highlight-color) !important;
+}
+
+.bg-complementary {
+  background-color: var(--complementary-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.text-highlight {
+  color: var(--highlight-color) !important;
+}
+
+.text-complementary {
+  color: var(--complementary-color) !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: var(--text-color);
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--highlight-color);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}

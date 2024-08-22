@@ -1,31 +1,32 @@
 <div class="container">
-    <div class="container text-center" style="margin: 30px;">
-        <h1>Sistema de Inventario</h1>
-    </div>
-    <table class="table table-striped table-hover align-middle">
-        <thead class="table-dark">
-          <tr class="text-center">
-            <th scope="col">Id</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Existencia</th>
-            <th scope="col">Acción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let producto of productos">
-            <td scope="row" class="text-center">{{producto.idProducto}}</td>
-            <td>{{producto.descripcion}}</td>
-            <td class="text-center">{{producto.precio}}</td>
-            <td class="text-center">{{producto.existencia}}</td>
-            <td class="text-center">
-              <div class="container">
-                <button (click)="editarProducto(producto.idProducto)"
-                class="btn btn-warning btn-sm me-3">Editar</button>
-                <button (click)="eliminarProducto(producto.idProducto)" class="btn btn-danger btn-sm">Eliminar</button>
-              </div>
-            </td>
-          </tr>
-          </tbody>
-      </table>
+  <div class="text-center mb-4">
+    <h1 class="display-4 text-primary">Sistema de Inventario</h1>
+  </div>
+  <div class="table-wrapper">
+    <table class="table table-striped table-hover align-middle table-custom">
+      <thead class="thead-light">
+        <tr class="text-center">
+          <th scope="col">Id</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Existencia</th>
+          <th scope="col">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td class="text-center">{{producto.idProducto}}</td>
+          <td>{{producto.descripcion}}</td>
+          <td class="text-center">{{producto.precio}}</td>
+          <td class="text-center">{{producto.existencia}}</td>
+          <td class="text-center">
+            <div class="btn-group">
+              <button (click)="editarProducto(producto.idProducto)" class="btn btn-info btn-sm">Editar</button>
+              <button (click)="eliminarProducto(producto.idProducto)" class="btn btn-danger btn-sm">Eliminar</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
